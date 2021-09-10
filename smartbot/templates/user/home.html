@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>Unite.com</title>
+   
+</head>
+<body>
+    <div class="bgimage">
+        <div class="menu">
+
+            <div class="leftmenu">
+                <h4> Unite.com </h4>
+            </div>
+
+            <div class="rightmenu">
+                <ul>
+                    <li id="firstlist">Home</li>
+                    <li>Hotels & Resort</li>
+                    <li>About Us</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="text">
+            <h4>KNOWN FOR </h4>
+            <h1> CREATIVE & UNIQUENESS </h1>
+            <h3> “It has been, and continues to be, our responsibility to fill the earth with the light and warmth of hospitality.”</h3>
+            <button class="btn"> Booking</button>
+            <button class="btn"> Enquiry</button>
+        </div>
+    </div>
+
+    <button class="openChatBtn" onclick="openForm()"><img src= "{% static 'img/chat.png' %}" height="60px" width="150"></button>
+<div class="openChat">
+<form>
+<h1>Micky</h1>
+<hr>
+
+<textarea rows="1" cols="10" placeholder="Type message.." name="msg" required></textarea>
+<button type="submit" class="btn">Send</button>
+<button type="button" class="btn close" onclick="closeForm()">
+Close
+</button>
+</form>
+</div>
+<script>
+   document .querySelector(".openChatBtn") .addEventListener("click", openForm);
+   document.querySelector(".close").addEventListener("click", closeForm);
+   function openForm() {
+      document.querySelector(".openChat").style.display = "block";
+   }
+   function closeForm() {
+      document.querySelector(".openChat").style.display = "none";
+   }
+</script>
+
+</body>
+</html>
